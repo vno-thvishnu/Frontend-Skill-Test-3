@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.overall_background {
+  min-height: 100vh;
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+}
+.cards {
+  width: 20vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 0.5vw;
+  overflow: hidden;
+}
+img {
+  width: 15vw;
+  aspect-ratio: 5/6;
+  object-fit: cover;
+  border-radius: 0.5vw;
+}
+h4 {
+  margin: 0;
+  margin-top: 2vw;
+  font-size: 1.6vw;
+}
+p {
+  display: none;
+  margin: 0;
+  font-size: 1vw;
+  font-weight: 500;
+  color: #929292;
+  line-height: 1.5vw;
+}
+
+.cards > :nth-child(3) {
+  display: block;
+}
+.cards > div {
+  display: none;
+}
+
+.cards:hover > p {
+  display: block !important;
+  transition: display 5s ease-in-out !important;
+}
+.cards:hover > :nth-child(3) {
+  display: none !important;
+  transition: display 5s ease-in-out !important;
+}
+.cards:hover {
+  margin-top: 3vw;
+  height: fit-content;
+  scale: 1.15;
+  transition: scale 0.5s ease-out !important;
+}
+.cards:hover > h4 {
+  margin-top: 1vw;
+}
+.cards:hover > .icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5vw;
+  transition: display 5s ease-in-out !important;
+}
+@media only screen and (max-width: 600px) {
+  .overall_background {
+    flex-direction: column;
+    padding: 6vw 0 6vw 0;
+    gap: 5vw;
+  }
+  .cards {
+    width: 80vw;
+    gap: 3vw;
+    height: fit-content !important;
+  }
+  img {
+    width: 50vw;
+  }
+  h4 {
+    font-size: 6vw;
+  }
+  p {
+    display: block;
+    font-size: 4vw;
+    line-height: 5vw;
+  }
+  .cards > div {
+    display: flex;
+    gap: 4vw !important;
+  }
+  .cards:hover > p {
+    display: block !important;
+  }
+  .cards:hover > :nth-child(3) {
+    display: block !important;
+  }
+  .cards:hover {
+    margin-top: 0;
+    height: fit-content;
+    scale: none;
+  }
+  .cards:hover > h4 {
+    margin-top: 2vw;
+  }
+}
